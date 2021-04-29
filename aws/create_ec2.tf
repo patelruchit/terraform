@@ -8,10 +8,10 @@ provider "aws" {
 
 # Create an EC2 Instance
 resource "aws_instance" "UbuntuTF" {                    # The 'Ubuntu_from_TF' name is not significant for AWS, used as reference in the TF code
-    ami = "ami-042e8287309f5df03"                       # This is the AMI for Ubuntu Server 20.04 LTS (HVM) taken from AWS
+    ami = "<ami-from-aws-here>"                       # This is the AMI for Ubuntu Server 20.04 LTS (HVM) taken from AWS
     instance_type = "t2.micro"
-    subnet_id = "subnet-09d42f2df2erdf63c"              # The subnet belongs to a specific VPC, so VPC mapping is done here. 
-    security_groups = [ "sg-011a5g78r81bd01e0" ]
+    subnet_id = "<subnet-id-from-aws-here>"              # The subnet belongs to a specific VPC, so the instance will be that VPC.
+    security_groups = [ "<sg-id-from-aws-here>" ]
     tags = {
       "Name" = "Ubuntu-by-TF"
     }
